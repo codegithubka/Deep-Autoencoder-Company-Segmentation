@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Similarity Visualization</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Team Similarity Visualization</h1>
+    <form id="dataForm">
+        <label for="file_path">Data File Path:</label>
+        <input type="text" id="file_path" name="file_path">
+        <button type="button" onclick="loadPlot()">Load Plot</button>
+    </form>
+    <div id="plot_combined"></div>
+    <h2>Comparison Data</h2>
+    <table id="comparison_table" border="1">
+        <thead>
+            <tr>
+                <th>Team</th>
+                <th>Cluster Label</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        function loadPlot() {
+            const filePath = document.getElementById("file_path").value;
+            const formData = new FormData();
+            formData.append("file_path", filePath);
+
+            fetch('/get_plot_data', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                Plotly.newPlot('plot_combined', JSON.parse(data.combined_heatmap).data, JSON.parse(data.combined_heatmap).layout);
+
+                const tableBody = document.getElementById('comparison_table').getElementsByTagName('tbody')[0];
+                tableBody.innerHTML = '';
+                data.comparison_data.forEach(row => {
+                    const newRow = tableBody.insertRow();
+                    const cellTeam = newRow.insertCell(0);
+                    const cellClusterLabel = newRow.insertCell(1);
+                    cellTeam.innerHTML = row['Team'];
+                    cellClusterLabel.innerHTML = row['Cluster Label'];
+                });
+            });
+        }
+    </script>
+</body>
+</html>
