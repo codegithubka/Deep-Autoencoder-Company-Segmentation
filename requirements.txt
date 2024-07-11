@@ -9,4 +9,5 @@ networkx
 faker
 tensorflow
 umap
+kneed
 
