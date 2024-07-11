@@ -99,9 +99,3 @@ The script evaluates the clustering performance using the following metrics:
 
 The script includes functions to visualize the training history, cluster statistics, and cluster distribution. The visualizations help in understanding the model's performance and the characteristics of each cluster.
 
-## Future Improvements
-
-- **Data Augmentation**: Enhance the dataset with more features and interaction terms.
-- **Ensemble Methods**: Combine multiple autoencoders to improve robustness and accuracy.
-- **Advanced Clustering**: Experiment with other clustering algorithms such as DBSCAN or Gaussian Mixture Models.
-- **Model Generalization**: Validate the model on new, unseen datasets to test its generalization capabilities.
