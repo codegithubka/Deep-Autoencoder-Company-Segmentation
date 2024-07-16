@@ -10,4 +10,7 @@ faker
 tensorflow
 umap
 kneed
+jupyter-dash
+dash
+
 

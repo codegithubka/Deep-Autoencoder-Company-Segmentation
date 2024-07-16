@@ -1,0 +1,14 @@
+Field,DICE,MagICL,BioHIT,CAKT,CER,DIA,KMU,RoboSKEL,AI Politeia,ARTIFACT,INSANE,ID-IS,DEG,ISL
+Security,None,None,None,None,Average,None,Average,None,None,None,None,None,None,Strong
+Humanities,None,Average,None,Average,None,Good,None,Good,Good,Strong,None,None,None,Good
+Nat. Sci,None,None,None,None,None,None,None,None,None,None,Average,Good,None,Average
+Health,None,Average,Strong,None,Good,None,Strong,None,None,None,None,None,Good,None
+AI Ethics,None,None,None,Good,None,None,None,Good,Strong,Good,Average,None,None,None
+Big Data,Average,Average,Good,Good,Strong,None,None,None,Average,None,None,Strong,Strong,Good
+Robotics,None,None,None,None,None,None,None,Strong,None,None,None,None,None,None
+Documents,Strong,None,None,Good,None,Strong,None,None,None,None,None,None,None,None
+Multimedia,None,Strong,None,None,None,Good,None,None,None,Good,None,None,None,None
+NLP,Strong,None,Good,Strong,None,None,Good,None,None,None,Average,None,None,None
+KRR,Good,None,Average,Good,Strong,None,Good,None,None,Good,Average,Good,Good,Average
+Graphs,Good,None,Strong,None,Good,None,None,None,None,None,Average,None,None,None
+DL/ML,Good,Good,Good,Strong,Strong,Average,Average,Average,None,None,Good,Strong,Average,Average
