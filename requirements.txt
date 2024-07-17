@@ -12,5 +12,6 @@ umap
 kneed
 jupyter-dash
 dash
+ace-tools
 
 
