@@ -44,41 +44,6 @@ This project aims to group teams based on their strengths across different indus
     python main_script.py
     ```
 
-## Functions
-
-### load_and_preprocess_data(file_path)
-Loads and preprocesses the dataset by replacing strength levels with numerical values and standardizing the data.
-
-### add_interaction_features(data)
-Adds interaction features to capture more complex relationships between the original features.
-
-### create_autoencoder(input_dim, encoding_dim, layer_sizes, dropout_rate)
-Creates an autoencoder model with the specified parameters.
-
-### train_autoencoder(autoencoder, train_data, val_data, epochs, batch_size)
-Trains the autoencoder model and returns the training history.
-
-### get_encoded_data(autoencoder, data)
-Gets the encoded data (latent representation) from the trained autoencoder.
-
-### find_optimal_clusters(data, clustering_func, cluster_range)
-Finds the optimal number of clusters using multiple metrics and the elbow method. Includes exception handling for cases where the elbow point is not found.
-
-### apply_kmeans_clustering(encoded_data, n_clusters)
-Applies KMeans clustering to the encoded data.
-
-### apply_agglomerative_clustering(encoded_data, n_clusters)
-Applies Agglomerative Clustering to the encoded data.
-
-### evaluate_clustering(encoded_data, labels)
-Evaluates the clustering performance using silhouette score and Davies-Bouldin index.
-
-### compute_cluster_statistics(data, labels)
-Computes mean statistics for each cluster.
-
-### plot_cluster_statistics(cluster_stats, title)
-Plots the cluster statistics as a heatmap.
-
 ## Hyperparameter Tuning
 
 The script uses a grid search over a range of hyperparameters to find the best configuration for the autoencoder. The hyperparameters include:
